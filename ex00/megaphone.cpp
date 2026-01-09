@@ -1,17 +1,8 @@
 #include <iostream>
-#include <string>
+#include <sys/types.h>
 
-std::string uppercase_string (char *str)
-{
-    ssize_t i = -1;
-    std::string string = "";
-    while (str[++i])
-        string = string + (char)toupper(str[i]);
-    return (string);
-}
 int main (int argc, char **argv)
 {
-    std::string string = "";
     ssize_t i = 0;
 
     if (argc == 1)
@@ -22,8 +13,9 @@ int main (int argc, char **argv)
     else while (argv[++i] != NULL)
     {
         if (i != 1)
-            string.append(" ");
-        string.append(uppercase_string(argv[i]));
+            std::cout << " ";
+        for(ssize_t j = 0; argv[i][j] != '\0'; j++)
+            std::cout << (char)toupper(argv[i][j]);
     }
-    std::cout << string << std::endl;
+    std::cout << std::endl;
 }
