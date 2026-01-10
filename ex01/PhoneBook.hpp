@@ -1,14 +1,14 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 # include "Contact.hpp"
-#include <cstddef>
 class PhoneBook
 {
 	private:
 	Contact contacts[8];
-	size_t	size;
+	int	size;
 	public:
 	PhoneBook();
-	int	add_contact();
+	int		add_contact();
+	void	search();
 };
 #endif
