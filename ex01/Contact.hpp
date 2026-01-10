@@ -14,7 +14,7 @@ class Contact {
     public:
     Contact();
     void	add_contact(std::string first_name, std::string last_name, std::string nickname, std::string phone, std::string secret);
-	void	add_field(std::string input, char field);
+	void	add_field(std::string &input, char field);
 	std::string	get_field(char field);
     void	print_info() const;
     void	print_all() const;

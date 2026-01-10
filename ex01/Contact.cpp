@@ -2,11 +2,11 @@
 
 Contact::Contact()
 {
-	this->m_first_name = {};
-    this->m_last_name = {};
-    this->m_nickname = {};
-    this->m_phone = {};
-    this->m_secret = {};
+	this->m_first_name = "";
+    this->m_last_name = "";
+    this->m_nickname = "";
+    this->m_phone = "";
+    this->m_secret = "";
     this->m_isempty = true;
 
 }
@@ -20,7 +20,7 @@ void	Contact::add_contact(std::string first_name, std::string last_name, std::st
     this->m_isempty = false;
 
 }
-void	Contact::add_field(std::string input, char field)
+void	Contact::add_field(std::string &input, char field)
 {
 	if (field == 'f')
 		this->m_first_name = input;
