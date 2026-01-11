@@ -74,11 +74,11 @@ void	PhoneBook::search()
 		std::getline(std::cin, index);
 		if (index.size() == 1 && std::isdigit(index[0]) && index[0] < this->size - 1 + '0')
 		{
-			std::cout << this->contacts[std::atoi(index.c_str())].get_field('f') << std::endl;
-			std::cout << this->contacts[std::atoi(index.c_str())].get_field('l') << std::endl;
-			std::cout << this->contacts[std::atoi(index.c_str())].get_field('n') << std::endl;
-			std::cout << this->contacts[std::atoi(index.c_str())].get_field('p') << std::endl;
-			std::cout << this->contacts[std::atoi(index.c_str())].get_field('s') << std::endl;
+			std::cout << this->contacts[atoi(index.c_str())].get_field('f') << std::endl;
+			std::cout << this->contacts[atoi(index.c_str())].get_field('l') << std::endl;
+			std::cout << this->contacts[atoi(index.c_str())].get_field('n') << std::endl;
+			std::cout << this->contacts[atoi(index.c_str())].get_field('p') << std::endl;
+			std::cout << this->contacts[atoi(index.c_str())].get_field('s') << std::endl;
 			return;
 		}
 		else if (index[0] == 0)

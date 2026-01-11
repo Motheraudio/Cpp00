@@ -74,7 +74,7 @@ OBJECTS = ${SRCS:.cpp=.o}
 OBJDIR = obj
 OBJECTFILES = $(addprefix $(OBJDIR)/, $(OBJECTS))
 CC = c++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 $(OBJDIR)/%.o: %.cpp
 	@mkdir -p $(OBJDIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
