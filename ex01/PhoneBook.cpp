@@ -72,7 +72,7 @@ void	PhoneBook::search()
 	{
 		std::cout << "Which contact? provide its index" << std::endl;
 		std::getline(std::cin, index);
-		if (index.size() == 1 && std::isdigit(index[0]) && index[0] < this->size - 1 + '0')
+		if (index.size() == 1 && std::isdigit(index[0]) && index[0] < this->size + '0')
 		{
 			std::cout << this->contacts[atoi(index.c_str())].get_field('f') << std::endl;
 			std::cout << this->contacts[atoi(index.c_str())].get_field('l') << std::endl;
